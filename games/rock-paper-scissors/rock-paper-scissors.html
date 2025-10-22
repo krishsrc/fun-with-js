@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../../src/output.css" />
+    <link rel="stylesheet" href="./games/rock-paper-scissors/rps-style.css" />
+  </head>
+  <body class="bg-[#D9D9D9]">
+    <div
+      class="rps-container max-w-md mx-auto mt-10 bg-[#fcf1f1] rounded-lg shadow-lg cursor-default"
+    >
+      <div class="rps-header flex justify-center items-center p-4">
+        <h1 class="text-[#070A52] text-2xl font-bold flex-3">
+          Rock Paper Scissors
+        </h1>
+
+        <div class="rps-theme-mode">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 flex justify-center items-center cursor-pointer"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="rps-score-count flex justify-around p-4 text-lg font-medium">
+        <div class="rps-score-player">
+          <span>Player: </span>
+          <span id="player-score">0</span>
+        </div>
+
+        <div class="rps-score-computer">
+          <span>Computer: </span>
+          <span id="computer-score">0</span>
+        </div>
+      </div>
+
+      <div
+        class="rps-display-result p-4 text-center font-bold text-xl sm:text-3xl uppercase"
+      >
+        <span id="result-message"> You Won!🎉</span>
+      </div>
+
+      <div class="rps-visuals flex justify-center items-center gap-8 p-4">
+        <div class="rps-player-visuals">
+          <img
+            src="../../assets/images/rock-paper-scissors/paper.png"
+            alt="paper"
+            class="rps-player-visuals-image w-10 sm:w-16"
+          />
+        </div>
+        <span class="font-medium uppercase">v/s</span>
+        <div class="rps-computer-visuals">
+          <img
+            src="../../assets/images/rock-paper-scissors/rock.png"
+            alt="rock"
+            class="rps-computer-visuals-image w-10 sm:w-16"
+          />
+        </div>
+      </div>
+
+      <div class="rps-player-choices flex flex-col items-center p-4">
+        <p class="font-light text-center text-lg">Choose Your Move:</p>
+
+        <div
+          class="rps-player-choices-button flex flex-wrap justify-center items-center mt-4 gap-2 sm:gap-4"
+        >
+          <button
+            class="rps-player-choice-rock bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-8 sm:px-10 rounded-lg cursor-pointer"
+            id="rock"
+          >
+            Rock
+          </button>
+
+          <button
+            class="rps-player-choice-paper bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-8 sm:px-10 rounded-lg cursor-pointer"
+            id="paper"
+          >
+            Paper
+          </button>
+
+          <button
+            class="rps-player-choice-scissors bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 sm:px-8 rounded-lg cursor-pointer"
+            id="scissors"
+          >
+            Scissors
+          </button>
+        </div>
+      </div>
+
+      <div class="rps-score-reset text-center">
+        <button
+          class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-10 rounded-lg m-4 cursor-pointer"
+        >
+          Reset Score
+        </button>
+      </div>
+
+      <div class="rps-footer p-4 text-center">
+        <p class="font-light text-sm">Made with ❤️ by Krish</p>
+      </div>
+    </div>
+    <script src="/games/rock-paper-scissors/rps-application.js"></script>
+  </body>
+</html>

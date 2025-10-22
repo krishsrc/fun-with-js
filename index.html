@@ -4,47 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fun With Js</title>
-    <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="box-border m-0 p-0 bg-[#fbf3d1]">
-    <nav>
-      <h1 class="text-3xl font-bold text-center pt-4">Fun With Js</h1>
-      <h3 class="text-sm font-light text-center">Play, Learn, Experiment</h3>
-    </nav>
-    <main>
-      <div class="bg-white">
-        <div
-          class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
-        >
-          <h2 class="text-2xl font-bold tracking-tight text-gray-900">Games</h2>
+  <body class="root box-border m-0 p-0" id="root">
+    <section
+      class="section-intro shapedividers bg-[#f5d2b8] text-center p-10 h-screen flex flex-col justify-center align-center"
+    >
+      <h3 class="py-3">Hi, I'm</h3>
+      <h1 class="font-bold text-6xl">Krish</h1>
+      <h3 class="py-2">I Develop</h3>
+    </section>
 
+    <section
+      class="section-projects bg-[#FFF0DD] p-10 min-h-screen flex flex-row flex-wrap justify-center items-center"
+    >
+      <div class="section-title flex flex-col w-full">
+        <h1 class="text-3xl font-bold text-center pt-4">Fun With Js</h1>
+        <h3 class="text-sm font-light text-center">Play, Learn, Experiment</h3>
+      </div>
+
+      <!-- Rock Paper Scissors Game -->
+      <article
+        class="projects-container flex flex-wrap justify-center gap-6 p-4"
+      >
+        <!-- Project Card -->
+        <div
+          class="project-card bg-[#f2d9c5] shadow-md rounded-lg p-4 w-[90vw] sm:w-[45vw] md:w-[28vw] flex flex-col hover:scale-105 transition-transform duration-300"
+        >
+          <!-- Project Image -->
           <div
-            class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
-          >
-            <div class="group relative">
-              <img
-                src="assets/images/digital-clock.png"
-                alt="Digital Clock"
-                class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
-              />
-              <div class="mt-4 flex justify-between">
-                <div>
-                  <h3 class="text-sm text-gray-700">
-                    <a href="#">
-                      <span aria-hidden="true" class="absolute inset-0"></span>
-                      Digital Clock
-                    </a>
-                  </h3>
-                  <p class="mt-1 text-sm text-gray-500">
-                    This is a digital clock.
-                  </p>
-                </div>
-              </div>
+            class="project-card-image bg-cover bg-center rounded-md mb-4 aspect-video"
+            style="
+              background-image: url('assets/images/cover/rock-paper-scissors-cover.png');
+            "
+          ></div>
+
+          <!-- Project Content -->
+          <div class="project-card-content flex flex-col flex-grow">
+            <h2
+              class="project-card-title text-lg md:text-xl font-semibold uppercase mb-1"
+            >
+              Rock Paper Scissors
+            </h2>
+
+            <p class="project-card-description text-sm mb-3 font-light">
+              A simple Rock Paper Scissors game built with JavaScript.
+            </p>
+
+            <div class="project-card-button flex flex-col flex-grow">
+              <a
+                href="games/rock-paper-scissors/rock-paper-scissors.html"
+                class="text-sm md:text-base font-semibold bg-[#55ca80] px-3 py-2 rounded-md hover:bg-[#3cbe6b] cursor-pointer text-white transition-colors text-center"
+              >
+                Play
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </article>
+    </section>
+
     <script src="application.js"></script>
   </body>
 </html>
