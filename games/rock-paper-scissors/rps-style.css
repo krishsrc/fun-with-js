@@ -1,0 +1,82 @@
+.dark-mode-btn {
+  background-color: #2751a3;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-btn:hover {
+  background-color: #1d3d82;
+}
+
+/* ========== Base Styles ========== */
+.rps-container {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ========== Theme Modes ========== */
+body.light-mode,
+body:not(.dark-mode) {
+  background-color: #fcf1f1;
+  color: #070a52;
+}
+
+body.dark-mode {
+  background-color: #353535;
+  color: #ffffff;
+}
+
+body.dark-mode .rps-header-text {
+  color: #bebfd1;
+}
+
+body.dark-mode .rps-player-choice {
+  background-color: #2751a3;
+  color: white;
+}
+
+body.dark-mode .rps-player-choice:hover {
+  background-color: #4368bb;
+}
+
+/* ========== Game States ========== */
+
+/* Default state — minimal visuals */
+.state-default .rps-score-count,
+.state-default .rps-visuals,
+.state-default .rps-player-choices,
+.state-default .rps-player-choices-text {
+  display: none;
+}
+
+.state-default #result-message {
+  color: green;
+}
+
+/* Playing state — everything visible with animation */
+.state-playing .rps-score-count,
+.state-playing .rps-visuals,
+.state-playing .rps-player-choices,
+.state-playing .rps-player-choices-text {
+  display: flex;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInExpand 0.6s ease forwards;
+}
+
+/* Animation for smooth entry */
+@keyframes fadeInExpand {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Reset button styling */
+.state-default .rps-score-reset button {
+  background-color: green;
+  color: white;
+}
+
+.state-playing .rps-score-reset button {
+  background-color: #2751a3;
+  color: white;
+}
